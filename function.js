@@ -83,38 +83,39 @@ console.log(result);
 
 // // Question 3: Even Number Checker
 function isEven(Number){
-    if (Number %  2 == 0){
+    if (Number %  2 === 0){
         return "true";
     } else {
         return "false";
 }
 }
-const NumDig = prompt('enter a number');
+const NumDig = Number(prompt('enter a number')); 
 const result1 = isEven(NumDig);
 console.log(result1);
 
 // //Question 4: Score Categorizer:
 function scoreCategory(score){
-    if(score == 100 && score >= 90 );
+    score = Number(score);
+    if (score >= 90 && score <= 100)
     {
         return 'Excellent';
     }
-    elseif(score >= 80 && score <= 89 ) ;
+    else if (score >= 80 && score <= 89 ) 
     {
         return 'Very good';
     } 
-    elseif(score >= 70 && score <= 79 );
+    else if (score >= 70 && score <= 79 )
     {
         return 'Pass';
     }
-    elseif( score < 70 );
+    else if ( score < 70 )
     {
         return' fail';
-    } elseif(score > 100);
+    } else (score >= 0 && score > 100)
     {
     return 'out of bound';
     }
 }
-const scoreRev = prompt('enter a score');
+const scoreRev = (prompt('enter a score'));
 const result2 = scoreCategory(scoreRev);
 console.log(result2);
